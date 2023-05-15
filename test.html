@@ -9,15 +9,47 @@
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     </head>
 
-    <body>
-        <div>
-           
+    <body class="font-sans">
+      
+             
+        <button class="open-button bg-blue-500	" onclick="openForm()">Open Form</button>
+        
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
         </div>
+        
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
 
+
+
+      <!-- below non edited -->
+      <div class=”popup” id=”popup-1″>
+        <div class=”content”>
+         
+        </div>
+      </div>
         <div class="flex-initial">
 
             <div class="px-4 py-2 bg-gray-200 lg:w-100vh">
-                <div class="details text-center mt-10 text-2xl font-black">Pooja Details</div>
                 <div class="hidden lg:block">
                     <div class="my-2 mb-6">
 
@@ -285,30 +317,27 @@ colourful paints."
           </figure>
        
     </div>
-    <!--<a href="" target="_blank">-->
+    <a href="/sarasvati.html" target="_blank">
     <img class="rounded-full w-60 h-60" src="sar.jpeg"></img></a>
- </div>
- <a href="script.js" target=_script.js>
+</div>
+</div>   
+        </div>
 
+<p id="demo"></p>
 
-  <button>click me</button>
- </a>
- 
- <script>
-  
-      // function to open the popup window
-      function openPopUp() {
-         let url = "script.js";
-         let height = 300;
-         let width = 700;
-         var left = ( screen.width - width ) / 2;
-         var top = ( screen.height - height ) / 2;
-         var newWindow = window.open( url, "center window", 'resizable = yes, width=' + width + ', height=' + height + ', top='+ top + ', left=' + left);
-      }
-    </script>
-  
+<script>
+/* function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
 
-    </div>   
-  </div>
-  </body>
+ */
+
+ </script>
+    </body>
 </html>
